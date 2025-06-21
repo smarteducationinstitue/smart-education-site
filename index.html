@@ -120,61 +120,158 @@
   <button onclick="document.getElementById('contact').scrollIntoView()">📞 Call Now</button>
 </div>
 
+
 <section id="about" class="section">
   <h2>About Us</h2>
-  <p>Welcome to Smart Education Institute — your trusted partner for academic success from Std. 1 to M.Com. Our expert faculty focus on clarity, practical learning, and individual attention for every student.</p>
+  <p>Smart Education Institute, established in 2014, has helped over 2000 students achieve academic excellence. Founded and managed by Brijesh Solanki (CA-Inter), the institute is committed to providing personalized, concept-based learning from Std. 1 to M.Com. With a focus on consistent progress and practical understanding, we empower students with the knowledge and confidence they need to succeed.</p>
 </section>
+
+
+
 
 <section id="courses" class="section">
   <h2>Courses Offered</h2>
-  <div class="course-grid">
-    <div class="course-card">
-      <h3>📘 Std. 1 to 8</h3>
+
+  <div class="dropdown">
+    <button class="dropdown-btn">📘 Std. 1 to 8</button>
+    <div class="dropdown-content">
       <p>All Subjects – English & Gujarati Medium</p>
-      <p>Foundation building with regular assessments and interactive sessions.</p>
+      <p>We focus on nurturing young minds by building strong academic foundations through concept-based teaching, regular tests, doubt-solving sessions, and activity-based learning. Personal attention is ensured for each child’s holistic development.</p>
     </div>
-    <div class="course-card">
-      <h3>📗 Std. 9 & 10 (GSEB)</h3>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-btn">📗 Std. 9 & 10 (GSEB)</button>
+    <div class="dropdown-content">
       <p>Subjects: Maths, Science, English, Gujarati, Social Science</p>
-      <p>Board exam prep with concept clarity and mock tests.</p>
+      <p>Our specially curated board-focused curriculum ensures clarity of fundamental concepts with weekly tests, intensive revision, and paper-solving techniques. Ideal for scoring high in board exams.</p>
     </div>
-    <div class="course-card">
-      <h3>📙 Std. 11 & 12 Commerce</h3>
-      <p>Subjects: Accounts, Stats, SP, Eco, BA</p>
-      <p><strong>Offer:</strong> ₹999 per subject (Offline coaching)</p>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-btn">📙 Std. 11 & 12 Commerce (GSEB)</button>
+    <div class="dropdown-content">
+      <p>Subjects: Accountancy, Statistics, Business Administration, Economics, English</p>
+      <p>Comprehensive offline coaching at just ₹999 per subject. We offer exam-oriented training, complete syllabus coverage, and model paper practice with result tracking to boost academic performance.</p>
     </div>
-    <div class="course-card">
-      <h3>🎓 B.Com (All Semesters)</h3>
-      <p>Subjects: Accounts, Tax, Law, Costing, Economics</p>
-      <p><strong>Offer:</strong> ₹99 per subject per semester (Online registration only)</p>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-btn">🎓 B.Com (All Semesters)</button>
+    <div class="dropdown-content">
+      <p>Subjects: Financial Accounting, Taxation, Business Law, Cost Accounting, Business Economics, Management</p>
+      <p>Ideal for university students – ₹99 per subject per semester (Online Registration). Get expert guidance, last-year papers, assignment help, and semester-wise test planning.</p>
     </div>
-    <div class="course-card">
-      <h3>🎓 M.Com</h3>
-      <p>Subjects: Advanced Accounts, Tax Planning, Research Methodology, Finance</p>
-      <p>Advanced academic coaching for postgrad success.</p>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-btn">🎓 M.Com (Semester 1 to 4)</button>
+    <div class="dropdown-content">
+      <p>Subjects: Advanced Accounting, Strategic Financial Management, Research Methodology, Tax Planning</p>
+      <p>Postgraduate coaching for academic and career success. Focus on conceptual clarity, thesis/project guidance, and competitive exam readiness.</p>
     </div>
   </div>
 </section>
 
+<style>
+  .dropdown-btn {
+    width: 100%;
+    background-color: #004080;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .dropdown-content {
+    padding: 0 15px 15px;
+    background-color: white;
+    display: none;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll(".dropdown-btn");
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("active");
+        const content = btn.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+      });
+    });
+  });
+</script>
+
+
+
 <section id="gallery" class="section">
   <h2>Gallery</h2>
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1600195077076-d30c1d4773c0?auto=format&fit=crop&w=600&q=80" alt="Classroom">
-    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=600&q=80" alt="Students">
+  <div class="gallery"><img src="https://images.unsplash.com/photo-1600195077076-d30c1d4773c0?auto=format&fit=crop&w=600&q=80" alt="Classroom">
+    
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+  <iframe 
+    src="https://www.youtube.com/embed/fvQ_IKunk7c" 
+    title="YouTube video" 
+    frameborder="0" 
+    allowfullscreen
+    style="position:absolute;top:0;left:0;width:100%;height:100%;">
+  </iframe>
+
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+  <iframe 
+    src="https://www.youtube.com/embed/xsz2fYyFlls" 
+    title="YouTube video" 
+    frameborder="0" 
+    allowfullscreen
+    style="position:absolute;top:0;left:0;width:100%;height:100%;">
+  </iframe>
+
+<img src="gallery_ad_1.jpg" alt="Smart Education Advertisement 1">
+<img src="gallery_ad_2.jpg" alt="Smart Education Advertisement 2">
+</div>
+
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+  <iframe 
+    src="https://www.youtube.com/embed/ifr8dXeTTJI" 
+    title="YouTube video" 
+    frameborder="0" 
+    allowfullscreen
+    style="position:absolute;top:0;left:0;width:100%;height:100%;">
+  </iframe>
+</div>
+
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+  <iframe 
+    src="https://www.youtube.com/embed/Hgu09nOaRhE" 
+    title="YouTube video" 
+    frameborder="0" 
+    allowfullscreen
+    style="position:absolute;top:0;left:0;width:100%;height:100%;">
+  </iframe>
+</div>
+</div>
+<img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=600&q=80" alt="Students">
     <img src="https://images.unsplash.com/photo-1584697964380-b44b8453f043?auto=format&fit=crop&w=600&q=80" alt="Learning">
-    <img src="https://images.unsplash.com/photo-1600880292089-90e9c73e3a2d?auto=format&fit=crop&w=600&q=80" alt="Books">
-  </div>
+    <img src="https://images.unsplash.com/photo-1600880292089-90e9c73e3a2d?auto=format&fit=crop&w=600&q=80" alt="Books"></div>
 </section>
 
 <section id="contact" class="section">
   <h2>Contact / Enquiry</h2>
-  <form>
-    <input type="text" placeholder="Your Name" required />
-    <input type="tel" placeholder="Mobile Number" required />
-    <input type="text" placeholder="Course Interested" required />
-    <textarea placeholder="Your Message" rows="4"></textarea>
-    <button type="submit">Submit Enquiry</button>
-  </form>
+<form action="https://formsubmit.co/smarteducation130@gmail.com" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="tel" name="mobile" placeholder="Mobile Number" required />
+  <input type="text" name="course" placeholder="Course Interested" required />
+  <textarea name="message" placeholder="Your Message" rows="4"></textarea>
+  <button type="submit">Submit Enquiry</button>
+</form>
+
   <p><strong>Address:</strong> Ratanpark Road, Near Kamal Medical, Uttamnagar Rd, Ahmedabad</p>
   <p><strong>Phone:</strong> 9904877129</p>
   <p><strong>Email:</strong> smarteducation130@gmail.com</p>
@@ -184,7 +281,7 @@
 <footer>
   <p>© 2025 Smart Education Institute | Designed with ❤️ in Ahmedabad</p>
   <p>Privacy Policy | Terms & Conditions</p>
-</footer>
+<p>📺 <a href="https://www.youtube.com/@smarteducation3949" style="color: white; text-decoration: underline;" target="_blank">Visit our YouTube Channel</a></p></footer>
 
 </body>
 </html>
