@@ -253,6 +253,18 @@
       text-decoration: none;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
+.whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      padding: 12px 14px;
+      border-radius: 50%;
+      font-size: 22px;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
 
 </style>
 
@@ -377,7 +389,42 @@
 
 </footer>
 
-<a href="tel:9904877129" class="sticky-call">📞 Call Now</a>
+
+<!-- Smooth Scroll Script -->
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetID = this.getAttribute('href');
+      const targetElement = document.querySelector(targetID);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 70,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+
+<!-- Contact Floating Buttons -->
+<div style="position: fixed; bottom: 20px; left: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 9999;">
+  <!-- Call Button -->
+  <a href="tel:9904877129" title="Call Now" style="background-color: #007bff; color: white; padding: 12px 14px; border-radius: 50%; font-size: 20px; text-align: center; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+    📞
+  </a>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/919904877129" target="_blank" title="Chat on WhatsApp" style="background-color: #25d366; color: white; padding: 12px 14px; border-radius: 50%; font-size: 20px; text-align: center; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+    💬
+  </a>
+
+  <!-- Email Button -->
+  <a href="mailto:smarteducation130@gmail.com" title="Send Email" style="background-color: #dc3545; color: white; padding: 12px 14px; border-radius: 50%; font-size: 20px; text-align: center; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+    ✉️
+  </a>
+</div>
+
  </body>
 
 </html>
