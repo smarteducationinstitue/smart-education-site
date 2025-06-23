@@ -265,7 +265,25 @@
       z-index: 1000;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
-
+.gallery-item {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.gallery-item img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-item:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.caption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #004080;
+  font-weight: 500;
+}
 </style>
 
 <script>
@@ -286,12 +304,21 @@
 <section id="gallery" class="section">
   <h2>Gallery</h2>
   <div class="gallery">
+    <div class="gallery">
+  <div class="gallery-item">
     <img src="images/Classroom1.jpg" alt="Classroom Photo" />
-    <img src="images/Classroom2.jpg" alt="Classroom Photo" />
+    <p class="caption">Modern Classroom Setup</p>
+  </div>
+  <div class="gallery-item">
     <img src="images/Student2.jpg.jpg" alt="Computer Lab" />
-    <!-- Existing images here -->
+    <p class="caption">Students in Practical Lab</p>
+  </div>
+  <div class="gallery-item">
+    <img src="images/Classroom2.jpeg" alt="B.Com Flyer" />
+    <p class="caption">B.Com Coaching - July 2025 Batch</p>
+  </div>
+</div>
 
-  <div class="gallery"><img src="https://images.unsplash.com/photo-1600195077076-d30c1d4773c0?auto=format&fit=crop&w=600&q=80" alt="Classroom">
     
 <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
   <iframe 
