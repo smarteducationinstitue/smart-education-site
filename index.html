@@ -107,11 +107,22 @@
 </header>
 
 <nav>
-  <a href="#">Home</a>
-  <a href="#about">About Us</a>
-  <a href="#courses">Courses</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#contact">Contact</a>
+  <ul class="navbar">
+    <li><a href="#">Home</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li class="dropdown">
+      <a href="#courses">Courses ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="#courses">Std. 1 to 8</a></li>
+        <li><a href="#courses">Std. 9 & 10</a></li>
+        <li><a href="#courses">Std. 11 & 12 (Commerce)</a></li>
+        <li><a href="#courses">B.Com (All Semesters)</a></li>
+        <li><a href="#courses">M.Com</a></li>
+      </ul>
+    </li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
 <div class="hero">
@@ -161,6 +172,7 @@
     <div class="dropdown-content">
       <p>All Subjects – English & Gujarati Medium</p>
       <p>We focus on nurturing young minds by building strong academic foundations through concept-based teaching, regular tests, doubt-solving sessions, and activity-based learning. Personal attention is ensured for each child’s holistic development.</p>
+      <p> * Strong academic foundation is the key to a bright future. We focus on Daily interactive classes,Fun worksheets and learning activities,Personal attention to each student,Basics of English, Maths, EVS, Gujarati, and Hindis</p>
     </div>
   </div>
 
@@ -169,6 +181,7 @@
     <div class="dropdown-content">
       <p>Subjects: Maths, Science, English, Gujarati, Social Science</p>
       <p>Our specially curated board-focused curriculum ensures clarity of fundamental concepts with weekly tests, intensive revision, and paper-solving techniques. Ideal for scoring high in board exams.</p>
+      <p> * Board exam years need expert guidance. We provide:Special focus on MCQs and board exam questions,Daily revision and weekly tests,Doubt-solving and board strategy sessions</p>
     </div>
   </div>
 
@@ -198,7 +211,62 @@
 </section>
 
 <style>
-  .dropdown-btn {
+nav ul.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+nav ul.navbar li {
+  position: relative;
+}
+
+nav ul.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: inline-block;
+}
+
+nav ul.navbar .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+nav ul.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white; /* white background */
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  z-index: 1000;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+nav ul.dropdown-menu li {
+  display: block;
+}
+
+nav ul.dropdown-menu li a {
+  padding: 10px 15px;
+  display: block;
+  color: #004080; /* blue text */
+  background-color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul.dropdown-menu li a:hover,
+nav ul.dropdown-menu li a:focus {
+  background-color: #004080; /* blue background */
+  color: white; /* white text on hover */
+}
+
+  
+.dropdown-btn {
     width: 100%;
     background-color: #004080;
     color: white;
